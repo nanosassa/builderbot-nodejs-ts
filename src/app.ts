@@ -18,10 +18,10 @@ const PORT = process.env.PORT ?? 3008
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const menuPath = path.join(__dirname, "mensajes", "menu.txt")
+const menuPath = path.join(__dirname, "../assets/mensajes", "menu.txt")
 const menu = fs.readFileSync(menuPath, "utf8")
 
-const pathConsultas = path.join(__dirname, "mensajes", "promptConsultas.txt")
+const pathConsultas = path.join(__dirname, "../assets/mensajes", "promptConsultas.txt")
 const promptConsultas = fs.readFileSync(pathConsultas, "utf8")
 
 

@@ -8,8 +8,7 @@
     "start": "node ./dist/app.js",
     "lint": "eslint . --no-ignore",
     "dev": "npm run lint && nodemon ./src/app.ts",
-    "build": "npx rollup -c && npm run copy-files",
-    "copy-files": "copyfiles -u 1 src/mensajes/* dist/mensajes/"
+    "build": "npx rollup -c"    
   },
   "keywords": [],
   "dependencies": {
