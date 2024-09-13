@@ -8,7 +8,8 @@
     "start": "node ./dist/app.js",
     "lint": "eslint . --no-ignore",
     "dev": "npm run lint && nodemon ./src/app.ts",
-    "build": "npx rollup -c"
+    "build": "npx rollup -c && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/mensajes/* dist/mensajes/"
   },
   "keywords": [],
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.4.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.52.0",
     "eslint-plugin-builderbot": "latest",
     "nodemon": "^3.1.0",

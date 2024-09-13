@@ -21,9 +21,7 @@
   },
   "include": [
     "**/*.js",
-    "**/*.ts",
-    "./mensajes/*",
-    "./keyfile.json"
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules",
