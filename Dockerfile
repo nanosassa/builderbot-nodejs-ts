@@ -30,6 +30,12 @@ COPY --from=builder /app/assets ./assets
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/*.json /app/*-lock.yaml ./
 
+# Crea la carpeta tmp dentro de /app
+RUN mkdir -p /app/tmp
+
+# Copia keyfile.json de src a /app
+COPY src/keyfile.json /app/keyfile.json
+
 RUN corepack enable && corepack prepare pnpm@latest --activate 
 ENV PNPM_HOME=/usr/local/bin
 
